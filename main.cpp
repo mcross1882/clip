@@ -40,6 +40,8 @@ void write_to_buffer(int data_length, char** data) {
         return;
     }
 
+    cout << "Entering interactive mode press CTRL+D to exit" << endl;
+
     for (string line; getline(cin, line);) {
         file << line << endl;
     }
