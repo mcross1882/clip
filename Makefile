@@ -5,6 +5,6 @@ SHELL := /bin/bash
 all:
 	g++ -o clip main.cpp
 install:
-	cp clip /usr/loca/bin/clip
+	cp clip /usr/local/bin/clip
 test:
 	bash ./test/test.sh
