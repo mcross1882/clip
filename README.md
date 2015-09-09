@@ -23,3 +23,13 @@ clip paste
 # Send clipboard data to file
 clip paste output.txt
 ```
+
+Building clip is very simple simply using the predefined `Makefile`
+
+```sh
+# Compile all the sources and run basic set of BDD tests
+make run-tests
+```
+
+This will generate an executable called `clip` in the working directory.
+
