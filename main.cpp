@@ -11,8 +11,8 @@
 
 using namespace std;
 
-const char* TEMP_FILE = "tmp_buffer";
-const char* COPY_COMMAND = "copy";
+const char* TEMP_FILE     = "/tmp/clip_buffer";
+const char* COPY_COMMAND  = "copy";
 const char* PASTE_COMMAND = "paste";
 
 const int REQUIRED_ARGUMENT_COUNT = 2;
