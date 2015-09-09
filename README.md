@@ -28,7 +28,10 @@ Building clip is very simple. Just use the predefined `Makefile`
 
 ```sh
 # Compile all the sources and run basic set of BDD tests
-make run-tests
+make && make test
+
+# To install the application globally run
+[sudo] make install
 ```
 
 This will generate an executable called `clip` in the working directory.

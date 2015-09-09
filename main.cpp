@@ -12,6 +12,8 @@
 using namespace std;
 
 const char* TEMP_FILE = "tmp_buffer";
+const char* COPY_COMMAND = "copy";
+const char* PASTE_COMMAND = "paste";
 
 const int REQUIRED_ARGUMENT_COUNT = 2;
 
@@ -87,9 +89,9 @@ void paste_action(int argc, char** argv, bool using_file) {
 void run_app(int argc, char** argv) {
     bool using_file = (argc == REQUIRED_ARGUMENT_COUNT + 1);
 
-    if (string_equals("copy", argv[1])) {
+    if (string_equals(COPY_COMMAND, argv[1])) {
         copy_action(argc, argv, using_file);
-    } else if (string_equals("paste", argv[1])){
+    } else if (string_equals(PASTE_COMMAND, argv[1])){
         paste_action(argc, argv, using_file);
     } else {
         print_help();
