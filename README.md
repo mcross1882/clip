@@ -24,7 +24,7 @@ clip paste
 clip paste output.txt
 ```
 
-Building clip is very simple simply using the predefined `Makefile`
+Building clip is very simple. Just use the predefined `Makefile`
 
 ```sh
 # Compile all the sources and run basic set of BDD tests

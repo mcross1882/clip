@@ -16,7 +16,7 @@ const char* TEMP_FILE = "tmp_buffer";
 const int REQUIRED_ARGUMENT_COUNT = 2;
 
 void print_help() {
-	cout << "Basic usage" << endl
+    cout << "Basic usage" << endl
          << "clip [copy|paste] [source]" << endl
          << "--------------------------" << endl
          << "copy     - Copies stdin or a file to the buffer" << endl
@@ -34,11 +34,11 @@ void copy_file(const char* filename, const char* destination) {
 }
 
 void write_to_buffer(int data_length, char** data) {
-	ofstream file(TEMP_FILE);
-	if (!file.is_open()) {
+    ofstream file(TEMP_FILE);
+    if (!file.is_open()) {
         cerr << "Error: Failed to open buffer file" << endl;
         return;
-	}
+    }
 
     for (string line; getline(cin, line);) {
         file << line << endl;
@@ -95,10 +95,10 @@ void run_app(int argc, char** argv) {
 }
 
 int main(int argc, char** argv) {
-	if (argc < REQUIRED_ARGUMENT_COUNT) {
-		print_help();
-		return 1;
-	}
+    if (argc < REQUIRED_ARGUMENT_COUNT) {
+        print_help();
+        return 1;
+    }
 
     try {
         run_app(argc, argv);
@@ -107,6 +107,6 @@ int main(int argc, char** argv) {
         return 1;
     }
 
-	return 0;
+    return 0;
 }
 
